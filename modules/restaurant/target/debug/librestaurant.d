@@ -1,0 +1,1 @@
+/home/piragi/RustProjects/RustHandbook/modules/restaurant/target/debug/librestaurant.rlib: /home/piragi/RustProjects/RustHandbook/modules/restaurant/src/front_of_house/hosting.rs /home/piragi/RustProjects/RustHandbook/modules/restaurant/src/front_of_house.rs /home/piragi/RustProjects/RustHandbook/modules/restaurant/src/lib.rs
