@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 enum SpreadsheetCell {
     Int(i32),
     Float(f64),
@@ -5,6 +7,45 @@ enum SpreadsheetCell {
 }
 
 fn main() {
+    hashmaps();
+    strings();
+    vectors();
+}
+
+fn hashmaps() {
+    let mut scores = HashMap::new();
+
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Yellow"), 20);
+
+    let team_name = String::from("Yellow");
+    let yellow = scores.get(&team_name);
+    scores.insert(team_name, 30);
+    scores.entry(String::from("Green")).or_insert(55);
+
+    for (k, v) in &scores {
+        println!("{}, {}", k, v);
+    }
+}
+
+fn strings() {
+    let mut s = String::new();
+    let data = "initial contents";
+    s = data.to_string();
+    s = "initial contents".to_string();
+    let mut s = String::from("initial contents");
+    s.push_str(" with additional data");
+
+    let s1 = String::from("Hello, ");
+    let s2 = String::from("world!");
+    let s3 = s1 + &s2; //mind the ownership!
+
+    for c in "नमस्ते".chars() {
+        println! {"{}", c};
+    }
+}
+
+fn vectors() {
     let v: Vec<i32> = Vec::new();
     let mut v = vec![1, 2, 3];
 
